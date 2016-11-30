@@ -2,7 +2,6 @@
 
 var navbarDirectiveFactory = function() {
   return {
-    scope: false,
     restrict: 'E',
     templateUrl: 'views/partial/navbar-directive.html'
   };
