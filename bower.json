@@ -10,7 +10,7 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "luxoftApp",
+  "moduleName": "auction",
   "overrides": {
     "bootstrap": {
       "main": [
