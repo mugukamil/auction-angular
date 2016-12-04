@@ -2,7 +2,8 @@
 
 angular
   .module('auction', [
-    'ngRoute'
+    'ngRoute',
+    'restangular'
   ])
   .config(['$routeProvider', function ($routeProvider) {
     var title = function(page) {
@@ -37,6 +38,10 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  }])
+  .config(['RestangularProvider', function(RestangularProvider) {
+    RestangularProvider.setBaseUrl('https://private-5c1fc8-romanivanov1.apiary-mock.com');
+    // RestangularProvider.setRequestSuffix('');
   }])
   .run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, currentRoute) {

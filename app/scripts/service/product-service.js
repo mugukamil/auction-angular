@@ -1,27 +1,21 @@
 'use strict';
 
-var ProductService = function($http) {
-    this.$http = $http;
+var ProductService = function(Restangular) {
+    this.Restangular = Restangular;
 };
 
 ProductService.prototype = {
     getProducts: function() {
-        return this.$http.get('data/products-featured.json')
-            .then(function(res) { return res.data; });
+      return this.Restangular.all('products').getList();
     },
-    find: function() {
-        return this.$http.get('data/products-search.json')
-            .then(function(res) { return res.data; });
+    find: function(params) {
+      return this.Restangular.all('products').getList(params);
     },
     getProductById: function(productId) {
-      return this.getProducts().then(function(products) {
-        return products.filter(function(product) {
-          return product.id === productId;
-        });
-      });
+      return this.Restangular.one('products', productId).get();
     }
 };
 
-ProductService.$inject = ['$http'];
+ProductService.$inject = ['Restangular'];
 
 angular.module('auction').service('ProductService', ProductService);

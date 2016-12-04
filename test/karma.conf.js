@@ -24,6 +24,10 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+      'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/restangular/dist/restangular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
