@@ -29,8 +29,8 @@ var priceRangeDirectiveFactory = function() {
 
       slider.on('slideStop', function(e) {
         scope.$apply(function() {
-          if (scope.lowPrice !== e.value[0]) { scope.lowPrice = e.value[0] }
-          if (scope.highPrice !== e.value[1]) { scope.highPrice = e.value[1] }
+          if (scope.lowPrice !== e.value[0]) { scope.lowPrice = e.value[0]; }
+          if (scope.highPrice !== e.value[1]) { scope.highPrice = e.value[1]; }
         });
       });
 
